@@ -376,5 +376,12 @@ func planFixtureSchema() *terraform.ProviderSchema {
 				},
 			},
 		},
+		DataSources: map[string]*configschema.Block{
+			"test_ds": {
+				Attributes: map[string]*configschema.Attribute{
+					"filter": {Type: cty.String, Optional: true},
+				},
+			},
+		},
 	}
 }
